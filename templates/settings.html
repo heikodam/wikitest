@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if personal_data %}
+<form method="post">
+    <input name="full_name" id="full_name" placeholder="Full Name" value="{{personal_data['full_name']}}" required>
+    <input name="email" id="email" placeholder="Email" value="{{personal_data['email']}}" required>
+
+    <fieldset id="gender">
+      <input type="radio" name="gender" value="male" required {{personal_data['male']}}> Male<br>
+      <input type="radio" name="gender" value="female" {{personal_data['female']}}> Female<br>
+      <input type="radio" name="gender" value="other" {{personal_data['other']}}> Other  
+    </fieldset>
+
+    <input type="password" name="old_password" id="old_password" placeholder="Old Password">
+    <input type="password" name="password" id="password" placeholder="Password">
+    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+    <input type="submit" value="Save">
+  </form>
+{% endif %}
+
+
+{% endblock %}

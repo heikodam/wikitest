@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Start Caluclating Your Wiki Pages Distance</h1>
+<form action="/wikicheat" method="POST">
+    <input type="text" name="start_link" id="start_link" placeholder="Start Title" required>
+    <input type="text" name="end_link" id="end_link" placeholder="End Title" required>
+    <input type="submit" id="start-link" Value="Start Calculate">
+</form>
+
+{% if results%}
+
+    <h1>Here are some results</h1>
+{% endif %}
+
+{% endblock %}

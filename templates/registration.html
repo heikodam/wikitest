@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to the Registration Page</h1>
+<form action="/register" method="post">
+    <input name="full_name" id="full_name" placeholder="Full Name" required>
+    <input name="email" id="email" placeholder="Email" required>
+    <input type="password" name="password" id="password" placeholder="Password" required>
+    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+    <!-- What Gender -->
+    <fieldset id="gender">
+      <input type="radio" name="gender" value="male" required> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other  
+    </fieldset>
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}
